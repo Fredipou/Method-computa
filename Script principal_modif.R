@@ -2,9 +2,11 @@
 # Pour jeu de donnée acoustique_oiseaux
 # Travail par Frédérick St-Pierre, Yohan Wegener, Aurel veillet et Félix Labbé
 
-#0 Installer les packages
+# 0) Installer les packages
 source("packages.R")
 
+
+# 0.1) Set le chemin de travail
 setwd(getwd())
 
 
@@ -26,12 +28,12 @@ source("validation.R")
 # 5) Visualisation des données modifiées
 View(bd)
 
-#6)Division
+# 6)Division
 source("Division.R")
 
 # 7) SQL Création des tables et insertion des données
 source("Table.R")
 
-#8) validation des tables sql
+# 8) validation des tables sql
 source("Valid_SQL.R")
 
