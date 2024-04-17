@@ -1,5 +1,5 @@
 ###SCRIPT nettoyage
-
+netto = function(bd){
 #Remplacer les valeur null en NA
 bd <- replace(bd, bd == "NULL", NA)
 
@@ -39,4 +39,4 @@ bd <- bd %>%
 #Avec la base de données "db" et la colonne est "date_obs", substituer les "-"
 
 bd$date_obs <- gsub("-", "/", bd$date_obs)
-
+}

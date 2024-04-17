@@ -1,4 +1,4 @@
-
+validation_sql = function(conoiseau){
 #To verify if the tables were created successfully in the SQLite database using R, you can query the database for the table names. Here's how you can do it:
 
 # Open the database connection
@@ -56,3 +56,4 @@ print(tbl_princ_validation)
 
 # Fermer la connexion à la base de données
 dbDisconnect(conoiseau)
+}

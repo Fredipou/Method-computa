@@ -1,5 +1,5 @@
 
-
+sql = function(conoiseau){
 # OUVRIR LA CONNECTION À LA BASE DE DONNÉES
 
 conoiseau <- dbConnect(SQLite(), dbname="conoiseau.db")
@@ -68,6 +68,6 @@ dbWriteTable(conoiseau, append = TRUE, name = "tbl_date", value = bd_date, row.n
 dbWriteTable(conoiseau, append = TRUE, name = "tbl_site", value = bd_site, row.names = FALSE)
 
 dbDisconnect(conoiseau)
-
+}
 
 

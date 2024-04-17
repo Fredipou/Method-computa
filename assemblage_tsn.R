@@ -1,5 +1,5 @@
 ###SCRIPT assemblage_tsn
-
+tsn_fonc = function(bd){
 #Trouver les tsn pour chaque espèce
 
 #Créer une liste d'espèces
@@ -15,8 +15,6 @@ codes <- as.integer(codes)
 #Combinner les "codes" et "esp@
 tsn_code <- as.data.frame(cbind(codes,esp))
 
-
-
 #Créer un vecteur vide avec 30433 valeurs (nombre de rangées)
 codes <- vector("numeric", length = 30433)
 
@@ -30,3 +28,4 @@ bd <- cbind(bd,codes)
 bd <- left_join(tsn_code, bd, by = "valid_scientific_name")
 bd <- bd[, -which(names(bd) == "codes.y")] #Enlever codes.y
 names(bd)[names(bd) == "codes.x"] <- "tsn"
+}
