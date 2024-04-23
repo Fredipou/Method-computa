@@ -1,17 +1,22 @@
 install.packages("targets")
 library(targets)
 
-
 # ===========================================
 # _targets.R file
 # ===========================================
 # Dépendances
-library(targets)
-tar_option_set(packages = c("MASS", "igraph"))
+
+
 
 # Scripts R
-source("R/analyse.R")
-source("R/figure.R")
+source("packages.R")
+source("assemblage_modif.R")
+source("nettoyage.R")
+source("assemblage_tsn.R")
+source("validation.R")
+source("Division.R")
+source("Table.R")
+source("Valid_SQL.R")
 
 # Pipeline
 list(
@@ -38,3 +43,15 @@ list(
     ma_figure(data, resultat_modele) # Réalisation de la figure
   )
 )
+
+
+
+
+
+
+
+
+
+
+
+

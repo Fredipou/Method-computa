@@ -1,5 +1,5 @@
 # Liste des packages à installer
-packages <- c("dplyr","stringr", "lubridate","taxize","RSQLite")
+packages <- c("dplyr","stringr", "lubridate","taxize","RSQLite","rmarkdown")
 
 #Boucle pour installer les packages non-installés par l'utilisateur 
 for (package in packages) {
